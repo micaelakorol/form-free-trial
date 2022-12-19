@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/informative.css";
+import "../../styles/informative.css";
 const Informative = () => {
   return (
       <section className="informative">

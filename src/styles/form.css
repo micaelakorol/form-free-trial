@@ -1,0 +1,145 @@
+/* principal container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+  margin-top: 7%;
+}
+
+form {
+  color: var(--white);
+  margin: 1rem;
+  width: 76%;
+}
+
+form input {
+  height: 1.9rem;
+  margin: 0.5rem;
+  width: 90%;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  border: 1.2px solid var(--gray);
+}
+
+.padding-form {
+  padding: 1rem;
+  background-color: var(--white);
+  text-align: center;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+/*principal button*/
+
+.btn-top {
+  color: var(--white);
+  height: 3rem;
+  box-sizing: border-box;
+  background-color: var(--background-btnTop);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 70%;
+  font-size: 0.9rem;
+  box-shadow: 5px 10px var(--shadow-btn);
+}
+
+.btn-top:hover {
+  opacity: 0.9;
+}
+
+.btn-top b {
+  font-weight: 600;
+}
+/*btn submit form*/
+.btn-submit {
+  background-color: var(--btnEnd);
+  width: 80%;
+  box-shadow: none;
+  height: 2.2rem;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+}
+
+.btn-submit:hover {
+  opacity: 0.6;
+}
+/*paragraph terms and conditions*/
+.terms-and-conditions {
+  color: var(--p-finish);
+  font-size: 11px;
+}
+
+.terms-and-conditions a {
+  color: var(--border-input);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms-and-conditions a:hover {
+  opacity: 0.5;
+}
+/* message of errors */
+.error__message {
+  color: var(--message-error);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  margin: 0;
+}
+/*svg of errors */
+.error__img {
+  padding: 0.4rem;
+  width: 1rem;
+  position: relative;
+  left: 88%;
+  bottom: 4.2rem;
+  display: flex;
+}
+
+/* border of input when displaying the error */
+
+.input {
+  border: 2px solid var(--border-input);
+}
+
+/*media queries*/
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .container-form {
+    margin: 5%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .btn-top {
+    height: auto;
+    padding: 0.7rem;
+    margin: 1.2rem;
+  }
+  .btn-submit {
+    width: 100%;
+    margin: auto;
+  }
+  .terms-and-conditions {
+    margin: 0.7rem;
+    font-size: 0.8rem;
+  }
+  .error__img {
+    left: 81%;
+    width: 1.3rem;
+  }
+}

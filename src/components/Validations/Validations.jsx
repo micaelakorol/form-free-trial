@@ -29,4 +29,3 @@ export const validationsForm = (form) => {
   }
   return errors;
 };
-/* formulario */

@@ -1,11 +1,11 @@
 import React from "react";
-import Form from "./components/Form";
-import "./css/App.css";
+import RenderAll from "./components/RenderAll";
+import "./styles/App.css";
 
 const App = () => {
   return (
     <>
-      <Form />
+      <RenderAll />
     </>
   );
 };

@@ -1,21 +1,22 @@
 import React from "react";
-import { initialForm } from "./initialForm";
-import { validationsForm } from "./Validations/Validations";
-import useForm from "../hook/useForm";
-import img from "../images/icon-error.svg";
+import { initialForm } from "../InitialValues/initialForm";
+import { validationsForm } from "../Validations/Validations";
+import useForm from "../../hook/useForm";
+import { ImgWarning } from "../Validations/ImgWarning";
+import BtnTop from "./BtnTop";
+
 const Form2 = () => {
   const { form, errors, handleBlur, handleChange, handleSubmit } = useForm(
     initialForm,
     validationsForm
   );
+  
   return (
     <section className="container-form">
-      <button className="btn-top">
-        <b>Try it free 7 days</b>
-        then $20/mo.thereafter
-      </button>
+ <BtnTop />
+      {/* Form */}
       <form action="" onSubmit={handleSubmit}>
-        <section className="form">
+        <section className="padding-form">
           <input
             type="text"
             name="name"
@@ -24,12 +25,12 @@ const Form2 = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             value={form.name}
-            required
             className={errors.name && "input"}
+            required
           />
-
+          {/* display errors */}
           {errors.name && <p className="error__message">*{errors.name}</p>}
-          {errors.name && <img src={img} alt="" className="error__img" />}
+          {errors.name && <ImgWarning />}
 
           <input
             type="text"
@@ -37,16 +38,16 @@ const Form2 = () => {
             placeholder="Perez"
             autoComplete="off"
             value={form.lastname}
-            required
             onBlur={handleBlur}
             onChange={handleChange}
             className={errors.lastname && "input"}
+            required
           />
-
+          {/* display errors */}
           {errors.lastname && (
             <p className="error__message">*{errors.lastname}</p>
           )}
-          {errors.lastname && <img src={img} alt="" className="error__img" />}
+          {errors.lastname && <ImgWarning />}
 
           <input
             type="email"
@@ -54,14 +55,14 @@ const Form2 = () => {
             name="email"
             autoComplete="off"
             value={form.email}
-            required
             onBlur={handleBlur}
             onChange={handleChange}
             className={errors.email && "input"}
+            required
           />
-
+          {/* display errors */}
           {errors.email && <p className="error__message">*{errors.email}</p>}
-          {errors.email && <img src={img} alt="" className="error__img" />}
+          {errors.email && <ImgWarning />}
 
           <input
             type="password"
@@ -70,21 +71,22 @@ const Form2 = () => {
             autoComplete="off"
             minLength={6}
             value={form.password}
-            required
             onBlur={handleBlur}
             onChange={handleChange}
             className={errors.password && "input"}
+            required
           />
+          {/* display errors */}
           {errors.password && (
             <p className="error__message">*{errors.password}</p>
           )}
-          {errors.password && <img src={img} alt="" className="error__img" />}
+          {errors.password && <ImgWarning />}
 
-          <button type="submit" className="btn-top btn-end">
+          <button type="submit" className="btn-top btn-submit">
             CLAIM YOUR FREE TRIAL
           </button>
 
-          <p className="p-finish">
+          <p className="terms-and-conditions">
             By clocking the button, you are agreeing to out
             <a href="/"> Terms and Services</a>
           </p>

@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Cutive&family=Kumbh+Sans:wght@200;700&family=Mohave&family=Mukta:wght@300&family=Nunito+Sans:ital,wght@0,300;0,400;1,400&family=PT+Serif&family=Poppins:wght@400;500;600&family=Quicksand:wght@300&family=Roboto+Mono:wght@200&family=Ubuntu+Condensed&display=swap");
  #root{
     --white: #fff;
+    --dark: #000;
+    --border-input:hsl(0, 100%, 74%);
+    --btnEnd: hsl(154, 59%, 51%);
+    --message-error:rgb(243, 102, 102);
+    --p-finish: hsl(246, 25%, 77%);
+    --gray: rgb(113, 112, 112);
+    --background-btnTop:hsl(248, 32%, 49%);
+    --shadow-btn: rgba(15, 15, 15, 0.2);
  }
 
 * {
@@ -11,7 +19,6 @@
 
 body {
   height: 100vh;
-  font-family: "Poppins";
   width: 100vw;
   overflow-x: hidden;
   background-image: url("../images/bg-intro-desktop.png");
