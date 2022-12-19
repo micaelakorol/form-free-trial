@@ -26,6 +26,7 @@ const Form2 = () => {
             onBlur={handleBlur}
             value={form.name}
             className={errors.name && "input"}
+            aria-required="true"
             required
           />
           {/* display errors */}
@@ -41,6 +42,7 @@ const Form2 = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             className={errors.lastname && "input"}
+            aria-required="true"
             required
           />
           {/* display errors */}
@@ -58,6 +60,7 @@ const Form2 = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             className={errors.email && "input"}
+            aria-required="true"
             required
           />
           {/* display errors */}
@@ -74,6 +77,7 @@ const Form2 = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             className={errors.password && "input"}
+            aria-required="true"
             required
           />
           {/* display errors */}
