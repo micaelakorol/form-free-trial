@@ -1,30 +1,27 @@
-import React from 'react'
-import '../../css/form.css'
-import {initialForm} from '../initialForm'
-import useForm from '../../hook/useForm'
-import img from'../../images/icon-error.svg'
-import { validationsForm } from '../Validations/Validations'
-
-const Form = () => {
-  const {form,errors,handleBlur,handleChange,handleSubmit} = useForm(initialForm,validationsForm)
-
+import React from "react";
+import { initialForm } from "./initialForm";
+import { validationsForm } from "./Validations/Validations";
+import useForm from "../hook/useForm";
+import img from "../images/icon-error.svg";
+const Form2 = () => {
+  const { form, errors, handleBlur, handleChange, handleSubmit } = useForm(
+    initialForm,
+    validationsForm
+  );
   return (
-    <div className='container'>
-
-<button className="btn-top">
+    <section className="container-form">
+      <button className="btn-top">
         <b>Try it free 7 days</b>
         then $20/mo.thereafter
       </button>
-
-      <section className="section-der">
-        <form action="" onSubmit={handleSubmit}>
+      <form action="" onSubmit={handleSubmit}>
+        <section className="form">
           <input
             type="text"
             name="name"
             placeholder="Juan"
             autoComplete="off"
             onChange={handleChange}
-            // eslint-disable-next-line no-mixed-operators
             onBlur={handleBlur}
             value={form.name}
             required
@@ -78,12 +75,12 @@ const Form = () => {
             onChange={handleChange}
             className={errors.password && "input"}
           />
-
           {errors.password && (
             <p className="error__message">*{errors.password}</p>
           )}
           {errors.password && <img src={img} alt="" className="error__img" />}
-          <button type="submit" className="btn-end">
+
+          <button type="submit" className="btn-top btn-end">
             CLAIM YOUR FREE TRIAL
           </button>
 
@@ -91,11 +88,10 @@ const Form = () => {
             By clocking the button, you are agreeing to out
             <a href="/"> Terms and Services</a>
           </p>
-        </form>
-      </section>
-  
-    </div>
-  )
+        </section>
+      </form>
+    </section>
+  );
+};
 
-  }
-export default Form
+export default Form2;

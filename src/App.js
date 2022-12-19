@@ -1,20 +1,13 @@
-import React from 'react'
-import Form from './components/pures/Form'
-import Informative from './components/pures/Informative'
-import './css/App.css'
-import { Helmet } from 'react-helmet'
+import React from "react";
+import Form from "./components/Form";
+import "./css/App.css";
 
 const App = () => {
   return (
-  <div>
-    <Helmet>
-    <link rel="icon" href={require('./images/heart.jpg')} />
-      <title>Formulario</title>
-        </Helmet>
-          <Form/>
-          <Informative/>
-              </div>
-  )
-}
+    <>
+      <Form />
+    </>
+  );
+};
 
-export default App
+export default App;
