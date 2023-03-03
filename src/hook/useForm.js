@@ -15,7 +15,7 @@ export default function useForm(initialForm, validateForm) {
 
   const handleBlur = (e) => {
     handleChange(e);
-    setErrors(validateForm(form)); //capta el error.
+    setErrors(validateForm(form)); //capture error.
   };
 
   const handleSubmit = (e) => {

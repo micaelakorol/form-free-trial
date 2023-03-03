@@ -4,13 +4,10 @@ import Informative from "./Form/Informative";
 import Form from "./Form/Form";
 
 const Render = () => {
-
-
   return (
     <main className="container">
-       <Informative />  
-     <Form />
-   
+      <Informative />
+      <Form />
     </main>
   );
 };
