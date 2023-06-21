@@ -25,7 +25,6 @@ export default function useForm(initialForm, validateForm) {
       return swal("very Good", "Check out your email!", "success");
     }
   };
-
   return {
     form,
     errors,

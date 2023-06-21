@@ -1,5 +1,6 @@
 import React from "react";
-import warning from "../../images/icon-error.svg";
+import warning from '../../images/icon-error.svg'
+
 
 export const ImgWarning = () => {
   return (
@@ -12,3 +13,4 @@ export const ImgWarning = () => {
     </>
   );
 };
+

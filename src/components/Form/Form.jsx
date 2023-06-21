@@ -8,6 +8,7 @@ import { data } from "./DataFields/dataForm";
 import Terms from "./ElementsForm/Terms";
 import BtnSend from "./ElementsForm/BtnSend";
 
+
 const Form2 = () => {
   const { form, errors, handleBlur, handleChange, handleSubmit } = useForm(
     initialForm,
@@ -18,7 +19,7 @@ const Form2 = () => {
 
   return (
     <section className="container-form">
-      <BtnTop />
+      <BtnT />
       {/* Form */}
       <form action="" onSubmit={handleSubmit}>
         <section className="padding-form">

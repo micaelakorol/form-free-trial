@@ -28,4 +28,4 @@ export const validationsForm = (form) => {
     errors.password = "Minimum 6 characters";
   }
   return errors;
-};
+}
