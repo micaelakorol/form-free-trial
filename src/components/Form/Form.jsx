@@ -8,7 +8,6 @@ import { data } from "./DataFields/dataForm";
 import Terms from "./ElementsForm/Terms";
 import BtnSend from "./ElementsForm/BtnSend";
 
-
 const Form2 = () => {
   const { form, errors, handleBlur, handleChange, handleSubmit } = useForm(
     initialForm,
@@ -19,7 +18,7 @@ const Form2 = () => {
 
   return (
     <section className="container-form">
-      <BtnT />
+      <BtnTop />
       {/* Form */}
       <form action="" onSubmit={handleSubmit}>
         <section className="padding-form">
@@ -38,7 +37,7 @@ const Form2 = () => {
               />
               {/* show errors */}
               {errors[field.name] && (
-                <p className="error__message">{errors[field.name]}</p>
+                <p className="error__message">*{errors[field.name]}</p>
               )}
               {errors[field.name] && <ImgWarning />}
             </React.Fragment>
