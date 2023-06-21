@@ -1,0 +1,28 @@
+
+.informative{
+  margin: auto;
+  margin-top: 25%;
+  margin-left: 4rem;
+}
+
+.informative .title{
+  font-size: 2rem;
+  margin-bottom: .7rem;
+  color: var(--white);
+}
+
+.informative .paragraph-informative{
+  width:77%;
+  text-align: center;
+  font-size: .88rem;
+  color: var(--white);
+}
+@media(max-width: 768px){
+  .informative{
+    margin-left: 0;
+    text-align: center;
+  }
+ .informative .paragraph-informative{
+    width: 90%;
+  }
+}
