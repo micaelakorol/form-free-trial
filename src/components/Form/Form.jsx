@@ -7,15 +7,14 @@ import BtnTop from "./ElementsForm/BtnTop";
 import { data } from "./DataFields/dataForm";
 import Terms from "./ElementsForm/Terms";
 import BtnSend from "./ElementsForm/BtnSend";
+import Input from "./ElementsForm/Input";
 
 const Form2 = () => {
   const { form, errors, handleBlur, handleChange, handleSubmit } = useForm(
     initialForm,
     validationsForm
   );
-
   let fields = data.item;
-
   return (
     <section className="container-form">
       <BtnTop />
@@ -24,16 +23,12 @@ const Form2 = () => {
         <section className="padding-form">
           {fields.map((field) => (
             <React.Fragment key={field.name}>
-              <input
-                type={field.type}
-                name={field.name}
-                placeholder={field.placeholder}
-                autoComplete={field.autoComplete}
-                value={form[field.name]}
-                onBlur={handleBlur}
-                onChange={handleChange}
-                error={errors[field.name]}
-                required={field.required}
+              <Input
+                field={field}
+                handleBlur={handleBlur}
+                handleChange={handleChange}
+                form={form}
+                errors={errors}
               />
               {/* show errors */}
               {errors[field.name] && (
