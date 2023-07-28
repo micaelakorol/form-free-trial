@@ -1,6 +1,6 @@
 import { useState } from "react";
 import swal from "sweetalert";
-export default function useForm(initialForm, validateForm) {
+export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
 

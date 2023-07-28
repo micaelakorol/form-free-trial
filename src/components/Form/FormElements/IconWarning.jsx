@@ -1,8 +1,6 @@
 import React from "react";
-import warning from '../../images/icon-error.svg'
-
-
-export const ImgWarning = () => {
+import warning from '../../../assets/icon-error.svg'
+const IconWarning = () => {
   return (
     <>
       <img
@@ -13,4 +11,4 @@ export const ImgWarning = () => {
     </>
   );
 };
-
+export default IconWarning

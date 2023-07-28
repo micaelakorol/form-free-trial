@@ -1,13 +1,13 @@
 import React from "react";
-import { initialForm } from "../InitialValues/initialForm";
-import { validationsForm } from "../Validations/Validations";
-import useForm from "../../hook/useForm";
-import { ImgWarning } from "../Validations/ImgWarning";
-import BtnTop from "./ElementsForm/BtnTop";
+import { initialForm } from "../../initialValues/initialForm";
+import { validationsForm } from "../../hook/validations";
+import {useForm} from "../../hook/useForm";
+import BtnTop from "./FormElements/BtnTop";
 import { data } from "./DataFields/dataForm";
-import Terms from "./ElementsForm/Terms";
-import BtnSend from "./ElementsForm/BtnSend";
-import Input from "./ElementsForm/Input";
+import Terms from "./FormElements/Terms";
+import BtnSend from "./FormElements/BtnSend";
+import Input from "../../reusable/Input";
+import ShowError from "./FormElements/ShowError";
 
 const Form2 = () => {
   const { form, errors, handleBlur, handleChange, handleSubmit } = useForm(
@@ -31,10 +31,7 @@ const Form2 = () => {
                 errors={errors}
               />
               {/* show errors */}
-              {errors[field.name] && (
-                <p className="error__message">*{errors[field.name]}</p>
-              )}
-              {errors[field.name] && <ImgWarning />}
+              <ShowError errors={errors} field={field}/>
             </React.Fragment>
           ))}
 
