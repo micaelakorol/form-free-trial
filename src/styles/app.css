@@ -17,8 +17,7 @@
   padding: 0;
 }
 
-main {
-  height: 100vh;
+html {
   overflow-x: hidden;
   background-image: url("../assets/bg-intro-desktop.png");
   background-color: hsl(0, 100%, 74%);
